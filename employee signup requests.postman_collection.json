@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "f1ef91ff-0bb4-4e3f-b2d7-82efc1050cda",
+		"name": "employee signup requests",
+		"description": "Request to \r\n1.setup database\r\n2.signup\r\n3.login\r\n4.get all employee details\r\n5.get employee details based on id\r\n6.update password of an employee\r\n7.delete an employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/employee/setupDb",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/employee/setupDb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee",
+						"setupDb"
+					]
+				},
+				"description": "to setup database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"staffId\":\"100003\",\n\"firstName\":\"Helen\",\n\"lastName\":\"Paul\",\n\"password\":\"mnop2341\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee"
+					]
+				},
+				"description": "to signup"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/employee/verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"staffId\":\"100003\",\n\"password\":\"mnop2341\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/employee/verify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee",
+						"verify"
+					]
+				},
+				"description": "to login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee"
+					]
+				},
+				"description": "get all employee details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/employee/id/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/employee/id/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee",
+						"id",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "100003"
+						}
+					]
+				},
+				"description": "to get employee details based on given employee id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"staffId\":\"100003\",\n\t\"password\":\"efgh7896\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee"
+					]
+				},
+				"description": "to update employee password"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/employee/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/employee/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"employee",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "100003"
+						}
+					]
+				},
+				"description": "to delete an employee detail"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,61 @@
+To setup database:(GET)
+=======================
+	
+	url: http://localhost:4000/employee/setupDb
+
+
+To signup:(POST)
+================
+
+	url: http://localhost:4000/employee
+	
+	body:
+		{“staffId”:"100003",
+		“firstName”:”Helen”,
+		“lastName”:”Paul”,
+		“password”:”Abcd1234”}
+
+
+To login:(POST)
+===============
+
+	url: http://localhost:4000/employee/verify
+
+	body:	
+		{“staffId”:"100003",
+		“password”:”Abcd1234”}
+
+
+To get all employee details:(GET)
+=================================
+
+	url: http://localhost:4000/employee
+
+
+To get employee details based on id:(GET)
+=========================================
+
+	url: http://localhost:4000/employee/id/:id
+
+	parameter:
+		id:100003
+
+
+To update employee password:(PUT)
+=================================
+
+	url: http://localhost:4000/employee
+
+	body:	
+		{“staffId”:"100003",
+		“password”:”Mnop5678”}
+
+
+To delete an employee:(DELETE)
+==============================
+
+	url: http://localhost:4000/employee/:id
+
+	parameter:
+		id:100003
+

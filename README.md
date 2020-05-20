@@ -54,6 +54,11 @@ Getting Started
     6.	Project server is running at:
         	
             Backend server is running at http://localhost:4000
+           
+    7.  To setup Database:
+    
+            Endpoint - http://localhost:4000/employee/setupDb
+            HTTP Method-GET
           
           
 Backend APIs
